@@ -276,11 +276,7 @@ else()
   set(MKLDNN_LIBRARIES_NAME "libmkldnn.so")
 endif()
 
-if(APPLE OR WIN32)
-  set(LIBDIR lib)
-else()
-  set(LIBDIR lib64)
-endif()
+set(LIBDIR ${CMAKE_INSTALL_LIBDIR})
 
 # ---[ MKLDNN
 if(DEFINED ENV{MKLDNNROOT})
